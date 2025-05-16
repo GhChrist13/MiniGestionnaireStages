@@ -3,155 +3,107 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Connexion - Espace Utilisateur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connexion - Mini Gestionnaire de Stages</title>
+    <link rel="stylesheet" href="connection.css" />
+    <!-- Font Awesome pour les icônes -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        * {
+        /* Styles spécifiques pour l'input avec icône œil */
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-wrapper input[type="password"],
+        .password-wrapper input[type="text"] {
+            width: 100%;
+            padding-right: 40px;
+            /* espace pour l'icône */
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #007BFF, #00C6FF);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;dj
-        .login-card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            width: 100%;
-            max-width: 400px;
-            animation: fadeIn 0.6s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .login-card h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
-        }
-
-        .form-group input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #007BFF;
-        }
-
-        .checkbox-container {
-            margin-top: -10px;
-            margin-bottom: 20px;
-            font-size: 14px;
-            color: #555;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .login-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #007BFF;
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-size: 16px;
-            font-weight: bold;
+        .password-wrapper .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
             cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .login-btn:hover {
-            background-color: #0056b3;
-        }
-
-        .footer-text {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
             color: #666;
+            font-size: 18px;
+            user-select: none;
         }
 
-        .footer-text a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        .footer-text a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 480px) {
-            .login-card {
-                padding: 30px 20px;
-            }
+        .password-wrapper .toggle-password:hover {
+            color: #007bff;
         }
     </style>
 </head>
 
 <body>
 
-    <div class="login-card">
-        <h2>Connexion</h2>
-        <form action="traitement_connexion.php" method="POST">
-            <div class="form-group">
-                <label for="email">Adresse e-mail</label>
-                <input type="email" id="email" name="email" placeholder="exemple@domaine.com" required />
-            </div>
-            <div class="form-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" placeholder="Votre mot de passe" required />
-            </div>
-            <div class="checkbox-container">
-                <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()" />
-                <label for="showPassword">Afficher le mot de passe</label>
-            </div>
-            <button type="submit" class="login-btn">Se connecter</button>
-        </form>
-        <div class="footer-text">
-            <p>Vous n'avez pas de compte ? <a href="#">Créer un compte</a></p>
+    <header>
+        <div class="container">
+            <h1>Connexion</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="register.html">S’inscrire</a>
+            </nav>
         </div>
-    </div>
+       
+        </div>
+        
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <h2>Bienvenue sur la plateforme</h2>
+            <p>Veuillez vous connecter pour accéder à votre tableau de bord étudiant.</p>
+        </section>
+
+        <section>
+            <form action="login.php" method="post" class="form-box">
+                <div class="form-group">
+                    <label for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" required placeholder="ex: etudiant@mail.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="password" name="password" required
+                            placeholder="Votre mot de passe" />
+                        <i id="togglePassword" class="far fa-eye toggle-password"
+                            title="Afficher / masquer le mot de passe"></i>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Se connecter</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Mini Gestionnaire de Stages - Projet SLAM & CIEL</p>
+        </div>
+    </footer>
 
     <script>
-        function togglePasswordVisibility() {
-            const passwordInput = document.getElementById("password");
-            passwordInput.type = passwordInput.type === "password" ? "text" : "password";
-        }
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', () => {
+            // Alterner le type d'input
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+
+            // Changer l'icône
+            togglePassword.classList.toggle('fa-eye');
+            togglePassword.classList.toggle('fa-eye-slash');
+        });
     </script>
 
 </body>
