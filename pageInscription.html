@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Inscription - Mini Gestionnaire de Stages</title>
     <link rel="stylesheet" href="inscription.css" />
+    <style>
+        .toggle-password {
+            position: absolute;
+            top: 38px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #555;
+        }
+
+        .form-group {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
 
     <div class="container">
         <h1>Créer un compte</h1>
-
-        <!-- Message d'erreur ou succès (à afficher dynamiquement via PHP ou JS) -->
-        <!-- <div class="message error">Erreur lors de l'inscription</div> -->
-        <!-- <div class="message success">Inscription réussie !</div> -->
 
         <form action="register.php" method="POST" novalidate>
             <div class="form-group">
@@ -37,12 +49,15 @@
                 <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password" placeholder="Votre mot de passe" required
                     minlength="6" />
+                <button type="button" class="toggle-password" onclick="toggleVisibility('password', this)">👁️</button>
             </div>
 
             <div class="form-group">
                 <label for="passwordConfirm">Confirmer le mot de passe</label>
                 <input type="password" id="passwordConfirm" name="passwordConfirm"
                     placeholder="Confirmez votre mot de passe" required minlength="6" />
+                <button type="button" class="toggle-password"
+                    onclick="toggleVisibility('passwordConfirm', this)">👁️</button>
             </div>
 
             <button type="submit">S’inscrire</button>
@@ -52,6 +67,19 @@
             <p>Vous avez déjà un compte ? <a href="connexion.html">Se connecter</a></p>
         </div>
     </div>
+
+    <script>
+        function toggleVisibility(id, btn) {
+            const input = document.getElementById(id);
+            if (input.type === "password") {
+                input.type = "text";
+                btn.textContent = "🙈";
+            } else {
+                input.type = "password";
+                btn.textContent = "👁️";
+            }
+        }
+    </script>
 
 </body>
 
