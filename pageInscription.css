@@ -1,15 +1,13 @@
-/* Reset global */
+/* Réinitialisation de base */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* Corps de page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f0f2f5;
-    color: #333;
+    background: linear-gradient(to right, #00b4db, #0083b0);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -17,75 +15,61 @@ body {
     padding: 20px;
 }
 
-/* Conteneur central */
+/* Conteneur principal */
 .container {
-    background: #fff;
-    padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 450px;
-    animation: fadeIn 0.5s ease forwards;
-}
-
-/* Animation d'apparition */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* Titre */
 .container h1 {
     text-align: center;
-    margin-bottom: 25px;
-    font-weight: 700;
-    color: #007bff;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 26px;
 }
 
-/* Groupes de champs */
+/* Groupe de formulaire */
 .form-group {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
-/* Labels */
-.form-group label {
+label {
     display: block;
+    margin-bottom: 8px;
     font-weight: 600;
-    margin-bottom: 6px;
     color: #444;
 }
 
-/* Champs input */
-.form-group input {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
     width: 100%;
-    padding: 10px 12px;
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus {
-    outline: none;
+input:focus {
     border-color: #007bff;
+    outline: none;
 }
 
-/* Bouton d'inscription */
+/* Bouton */
 button[type="submit"] {
     width: 100%;
     padding: 12px;
     background-color: #007bff;
     border: none;
-    border-radius: 8px;
     color: white;
-    font-weight: 700;
+    font-weight: bold;
+    border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -97,46 +81,49 @@ button[type="submit"]:hover {
 
 /* Pied de formulaire */
 .form-footer {
-    margin-top: 20px;
     text-align: center;
+    margin-top: 20px;
     font-size: 14px;
-    color: #555;
 }
 
 .form-footer a {
     color: #007bff;
     text-decoration: none;
-    font-weight: 600;
 }
 
 .form-footer a:hover {
     text-decoration: underline;
 }
 
-/* Messages (exemple erreur/succès) */
+/* Messages */
 .message {
-    padding: 12px 15px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    font-weight: 600;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .message.error {
     background-color: #f8d7da;
-    color: #842029;
-    border: 1px solid #f5c2c7;
+    color: #721c24;
 }
 
 .message.success {
-    background-color: #d1e7dd;
-    color: #0f5132;
-    border: 1px solid #badbcc;
+    background-color: #d4edda;
+    color: #155724;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-    .container {
-        padding: 25px 20px;
-        width: 100%;
-    }
+/* Icône œil (optionnelle si JS présent) */
+.toggle-password {
+    position: absolute;
+    top: 38px;
+    right: 12px;
+    font-size: 18px;
+    color: #777;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #007bff;
 }
