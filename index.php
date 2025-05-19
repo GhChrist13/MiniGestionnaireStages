@@ -14,23 +14,6 @@ $conn = new mysqli($host, $user, $password, $dbname);
 if ($conn->connect_error) {
     die("Erreur de connexion : " . $conn->connect_error);
 }
-// //Récupération des données de la base
-// $sql = "SELECT * FROM stage";
-// $result = $conn->query($sql);
-// if ($result->num_rows > 0) {
-//     while ($row = $result->fetch_assoc()) {
-//         echo":::". $row["intitule_stage"] ."". $row["adresse"];
-//     }
-// }
-
-
-// Récupération des éléments (liste)
-
-// $stages = [
-//     "intituleStage"=> "",
-//     "adresse"=> "",
-//     "adresseImage"=> "",
-// ]
 
 ?>
 
@@ -75,15 +58,23 @@ if ($conn->connect_error) {
 
             <!-- Filtrage -->
             <div class="filtre">
-                <div class="filtres">ESIC</div>
-                <div class="filtres">ICSE</div>
+                <?php
+                $sql = "SELECT DISTINCT nom_entreprise FROM stage";
+                $result = $conn->query($sql);
+                while ($row = $result->fetch_assoc()) { ?>
+                    <div class="filtres"><?php echo "" . $row["nom_entreprise"] ?></div>
+                    <?php
+                }
+                ?>
+                <!-- <div class="filtres">ESIC</div> -->
+                <!-- <div class="filtres">ICSE</div>
                 <div class="filtres">CISE</div>
                 <div class="filtres">ESIC</div>
                 <div class="filtres">ICSE</div>
                 <div class="filtres">CISE</div>
                 <div class="filtres">ESIC</div>
                 <div class="filtres">ICSE</div>
-                <div class="filtres">CISE</div>
+                <div class="filtres">CISE</div> -->
             </div>
 
             <!-- Block de stages -->
@@ -98,16 +89,16 @@ if ($conn->connect_error) {
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) { ?>
 
-                        <!-- <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2><?php echo $row["intitule_stage"]; ?></H2>
-                        <h5><?php echo $row["adresse"] ?>;</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div> -->
+                        <div class="stages">
+                            <div class="images" style="background-image: url(<?php echo $row["adresse_image"] ?>);"></div>
+                            <div class="desc">
+                                <H2><?php echo $row["intitule_stage"]; ?></H2>
+                                <h5><?php echo $row["adresse"] ?>;</h5>
+                                <h6 translate="no">Stage</h6>
+                                <span><i class="fa-solid fa-heart"></i></span>
+                                <button>Voir l'offre</button>
+                            </div>
+                        </div>
 
                         <?php
                     }
@@ -117,17 +108,23 @@ if ($conn->connect_error) {
 
                 <!-- Formulaire d'ajout d'offre -->
 
-                <div class="form_contain">
+                <div class="overlay">
+                    <div class="form_contain">
 
-                    <h2>Ajouter un Stage</h2>
+                        <h2 translate="no">Ajouter un Stage</h2>
 
-                    <form action="traitement.php" method="POST">
-                        <input type="text" name="intitule_stage" placeholder="Intitulé du stage" required>
-                        <input type="text" name="adresse_entreprise" placeholder="Adresse de l'entreprise" required>
-                        <input type="url" name="lien_image" placeholder="Lien de l'image" required>
-                        <button type="submit">Envoyer</button>
-                    </form>
+                        <form action="traitement.php" method="POST">
+                            <input type="text" name="nom_entreprise" placeholder="Nom de l'entreprise" required>
+                            <input type="text" name="intitule_stage" placeholder="Intitulé du stage" required>
+                            <input type="text" name="adresse_entreprise" placeholder="Adresse de l'entreprise" required>
+                            <input type="url" name="lien_image" placeholder="Lien de l'image">
+                            <div class="form-buttons">
+                                <button type="button" class="btn-annuler">Annuler</button>
+                                <button type="submit" class="btn-envoyer">Envoyer</button>
+                            </div>
+                        </form>
 
+                    </div>
                 </div>
 
 
@@ -219,6 +216,9 @@ if ($conn->connect_error) {
                     <i class="fa-solid fa-plus"></i><span class="hidden-desc">Ajouter une offre</span>
                 </div>
                 <div class="side-item">
+                    <i class="fa-solid fa-trash"></i><span class="hidden-desc">Supprimer une offre</span>
+                </div>
+                <div class="side-item">
                     <i class="fa-solid fa-heart"></i><span class="hidden-desc">Favoris</span>
                 </div>
             </div>
@@ -228,6 +228,11 @@ if ($conn->connect_error) {
     </div>
 
     <script src="index.js"></script>
+    <script>
+
+
+
+    </script>
 </body>
 
 </html>
