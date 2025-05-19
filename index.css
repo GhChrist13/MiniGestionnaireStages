@@ -1,15 +1,21 @@
-body{margin: 0;}
+body {
+    margin: 0;
+}
 
 /* Entête de page ============================================== */
 
 
-header{width: 100%; height: 50px; background-color: #000000;}
+header {
+    width: 100%;
+    height: 50px;
+    background-color: #000000;
+}
 
 
 /* Corps de page================================================ */
 
 
-.contain{
+.contain {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -18,21 +24,22 @@ header{width: 100%; height: 50px; background-color: #000000;}
 
 /* Block central======================== */
 
-.central-block{
+.central-block {
     width: 95%;
     padding: 0px 5px 0 0;
 }
 
 /* Barre de recherche */
 
-.search{
-    width: 700px;
+.search {
+    display: flex;
+    width: 750px;
     height: 40px;
     margin: auto;
     border-radius: 10px;
 }
 
-.search input{
+#search {
     position: relative;
     width: 90%;
     height: 100%;
@@ -42,32 +49,35 @@ header{width: 100%; height: 50px; background-color: #000000;}
     outline: none;
 }
 
-.search input::placeholder {
+#search::placeholder {
     color: #6699ff;
 }
 
-.search span{
+.search span {
     position: relative;
-    display: inline-block;
+    top: 10px;
+
     width: 10%;
     height: 100%;
     text-align: center;
     padding: 1px 0 0 0;
     border-radius: 0 10px 10px 0;
     font-size: 22px;
-    background-color: #4d79ff; /* bleu moyen */
+    background-color: #4d79ff;
+    /* bleu moyen */
     color: rgb(244, 244, 244);
     cursor: pointer;
 }
 
 .search span:hover {
-    background-color: #1659de; /* bleu plus foncé au hover */
+    background-color: #1659de;
+    /* bleu plus foncé au hover */
     color: #ffffff;
 }
 
 /* filtrage */
 
-.filtre{
+.filtre {
     /* display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -76,25 +86,28 @@ header{width: 100%; height: 50px; background-color: #000000;}
     margin: 25px 0 0 30px;
 }
 
-.filtres{
+.filtres {
     display: inline-block;
     text-align: center;
-    width: 100px;
+    min-width: 100px;
     height: 95%;
     margin-right: 10px;
-    padding-top: 5px;
+    padding: 5px 5px 0 5px;
     border-radius: 15px;
     font-size: 15px;
     border: 1px solid #4d79ff;
-    color: #4d79ff;;
+    color: #4d79ff;
     cursor: pointer;
 }
 
-.filtres:hover{background-color: #4d79ff; color: white;}
+.filtres:hover {
+    background-color: #4d79ff;
+    color: white;
+}
 
 /* Block de stages===== */
 
-.stage{
+.stage {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 30px;
@@ -104,7 +117,7 @@ header{width: 100%; height: 50px; background-color: #000000;}
     margin-top: 30px;
 }
 
-.stages{
+.stages {
     display: flex;
     flex-direction: column;
     width: 400px;
@@ -117,39 +130,45 @@ header{width: 100%; height: 50px; background-color: #000000;}
     transition-duration: 0.6s;
 }
 
-.stages:hover{box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;}
+.stages:hover {
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
 
-.images{
+.images {
     width: 100%;
     height: 65%;
     border-radius: 10px 10px 0 0;
-    background-image: url(https://www.eeb3.eu/app/themes/eeb3/assets/img/layout/child-page-placeholder.png);
+    /* background-image: url(https://www.eeb3.eu/app/themes/eeb3/assets/img/layout/child-page-placeholder.png); */
     background-position: center;
     background-size: cover;
 }
 
-.desc{
+.desc {
     width: 100%;
     height: 35%;
     padding: 5px 0 0 10px;
     border-radius: 0 0 10px 10px;
 }
 
-.desc button{
+.desc button {
     position: relative;
     top: -40px;
     left: 260px;
     border-radius: 10px;
 }
 
-button{
+button {
     border: 1.7px solid #4d79ff;
-    color: #4d79ff;;
+    color: #4d79ff;
+    ;
 }
 
-button:active{background-color: #4d79ff; color: white;}
+button:active {
+    background-color: #4d79ff;
+    color: white;
+}
 
-.desc span{
+.desc span {
     position: relative;
     top: -80px;
     left: 330px;
@@ -157,68 +176,169 @@ button:active{background-color: #4d79ff; color: white;}
     transition-duration: 0.5s;
 }
 
-.desc H2{font-weight: 400; font-size: 20px; color: blue;}
-.desc H5{font-weight: 100; font-size: 15px;}
-.desc H6{font-weight: 100; font-size: 10px;}
+.desc H2 {
+    font-weight: 400;
+    font-size: 20px;
+    color: blue;
+}
+
+.desc H5 {
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.desc H6 {
+    font-weight: 100;
+    font-size: 10px;
+}
 
 
 /* Block latérale=============== */
 
 .side {
-  width: 3.2%;
-  height: 100vh;
-  margin-left: 20px;
-  text-align: center;
-  font-size: 25px;
-  transition: width 0.6s ease;
-  overflow: hidden;
+    width: 3.2%;
+    height: 100vh;
+    margin-left: 20px;
+    text-align: center;
+    font-size: 25px;
+    transition: width 0.6s ease;
+    overflow: hidden;
 }
 
 .side.expand {
-  width: 300px;
-  text-align: left;
-  padding: 0 0 0 20px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 300px;
+    text-align: left;
+    padding: 0 0 0 20px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
 .side-icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
 }
 
 .side-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .hidden-desc {
-  font-size: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.6s ease;
+    font-size: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease;
 }
 
 .side.expand .hidden-desc {
-  opacity: 1;
-  visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 
-/* Ajout Stage */
+/* Ajout Stage ======================================*/
 
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
 
 .form_contain {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: #fff;
-      padding: 30px 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      width: 350px;
-    }
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 500px;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.form_contain h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+input[type="text"],
+input[type="url"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="url"]:focus {
+    box-shadow: 0 0 5px #3498db;
+}
+
+/* form button {
+    width: 90%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+} */
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-right: 30px;
+}
+
+form button {
+    padding: 10px 18px;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-envoyer {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-envoyer:hover {
+    background-color: #2980b9;
+}
+
+.btn-annuler {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-annuler:hover {
+    background-color: #c2c2c2;
+}
