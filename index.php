@@ -1,3 +1,40 @@
+<!-- Récupération des données de la BD -->
+
+
+<?php
+// Connexion à la bd
+$host = "localhost";
+$user = "root";
+$password = "";
+$dbname = "offre_stage";
+
+$conn = new mysqli($host, $user, $password, $dbname);
+
+// Vérifie la connexion
+if ($conn->connect_error) {
+    die("Erreur de connexion : " . $conn->connect_error);
+}
+// //Récupération des données de la base
+// $sql = "SELECT * FROM stage";
+// $result = $conn->query($sql);
+// if ($result->num_rows > 0) {
+//     while ($row = $result->fetch_assoc()) {
+//         echo":::". $row["intitule_stage"] ."". $row["adresse"];
+//     }
+// }
+
+
+// Récupération des éléments (liste)
+
+// $stages = [
+//     "intituleStage"=> "",
+//     "adresse"=> "",
+//     "adresseImage"=> "",
+// ]
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +69,8 @@
 
             <!-- Barre de Recherche -->
             <div class="search">
-                <input type="text" id="search" placeholder="Recherche"><span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <input type="text" id="search" placeholder="Recherche"><span><i
+                        class="fa-solid fa-magnifying-glass"></i></span>
             </div>
 
             <!-- Filtrage -->
@@ -52,7 +90,59 @@
 
             <div class="stage">
 
-                <div class="stages">
+                <?php
+
+                //Récupération des données de la base
+                $sql = "SELECT * FROM stage";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) { ?>
+
+                        <!-- <div class="stages">
+                    <div class="images"></div>
+                    <div class="desc">
+                        <H2><?php echo $row["intitule_stage"]; ?></H2>
+                        <h5><?php echo $row["adresse"] ?>;</h5>
+                        <h6 translate="no">Stage</h6>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                        <button>Voir l'offre</button>
+                    </div>
+                </div> -->
+
+                        <?php
+                    }
+                }
+                ?>
+
+
+                <!-- Formulaire d'ajout d'offre -->
+
+                <div class="form_contain">
+
+                    <h2>Ajouter un Stage</h2>
+
+                    <form action="traitement.php" method="POST">
+                        <input type="text" name="intitule_stage" placeholder="Intitulé du stage" required>
+                        <input type="text" name="adresse_entreprise" placeholder="Adresse de l'entreprise" required>
+                        <input type="url" name="lien_image" placeholder="Lien de l'image" required>
+                        <button type="submit">Envoyer</button>
+                    </form>
+
+                </div>
+
+
+                <!-- <div class="stages">
+                    <div class="images"></div>
+                    <div class="desc">
+                        <H2>Intitulé du stage</H2>
+                        <h5>Adresse de l'entreprise</h5>
+                        <h6 translate="no">Stage</h6>
+                        <span><i class="fa-solid fa-heart"></i></span>
+                        <button>Voir l'offre</button>
+                    </div>
+                </div> -->
+
+                <!-- <div class="stages">
                     <div class="images"></div>
                     <div class="desc">
                         <H2>Intitulé du stage</H2>
@@ -111,28 +201,28 @@
                         <span><i class="fa-solid fa-heart"></i></span>
                         <button>Voir l'offre</button>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
 
         <!-- Barre latérale======================== -->
         <div class="side">
-  <div class="side-icons">
-    <div class="side-item">
-      <i class="fa-solid fa-bars" id="barre"></i><span class="hidden-desc">Menu</span>
-    </div>
-    <div class="side-item">
-      <i class="fa-solid fa-house"></i><span class="hidden-desc">Accueil</span>
-    </div>
-    <div class="side-item">
-      <i class="fa-solid fa-plus"></i><span class="hidden-desc">Ajouter une offre</span>
-    </div>
-    <div class="side-item">
-      <i class="fa-solid fa-heart"></i><span class="hidden-desc">Favoris</span>
-    </div>
-  </div>
-</div>
+            <div class="side-icons">
+                <div class="side-item">
+                    <i class="fa-solid fa-bars" id="barre"></i><span class="hidden-desc">Menu</span>
+                </div>
+                <div class="side-item">
+                    <i class="fa-solid fa-house"></i><span class="hidden-desc">Accueil</span>
+                </div>
+                <div class="side-item" id="ajout_stage">
+                    <i class="fa-solid fa-plus"></i><span class="hidden-desc">Ajouter une offre</span>
+                </div>
+                <div class="side-item">
+                    <i class="fa-solid fa-heart"></i><span class="hidden-desc">Favoris</span>
+                </div>
+            </div>
+        </div>
 
 
     </div>
