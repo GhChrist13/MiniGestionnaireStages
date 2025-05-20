@@ -66,15 +66,6 @@ if ($conn->connect_error) {
                     <?php
                 }
                 ?>
-                <!-- <div class="filtres">ESIC</div> -->
-                <!-- <div class="filtres">ICSE</div>
-                <div class="filtres">CISE</div>
-                <div class="filtres">ESIC</div>
-                <div class="filtres">ICSE</div>
-                <div class="filtres">CISE</div>
-                <div class="filtres">ESIC</div>
-                <div class="filtres">ICSE</div>
-                <div class="filtres">CISE</div> -->
             </div>
 
             <!-- Block de stages -->
@@ -128,80 +119,10 @@ if ($conn->connect_error) {
                 </div>
 
 
-                <!-- <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div> -->
-
-                <!-- <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div>
-                <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div>
-                <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div>
-                <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div>
-                <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div>
-                <div class="stages">
-                    <div class="images"></div>
-                    <div class="desc">
-                        <H2>Intitulé du stage</H2>
-                        <h5>Adresse de l'entreprise</h5>
-                        <h6 translate="no">Stage</h6>
-                        <span><i class="fa-solid fa-heart"></i></span>
-                        <button>Voir l'offre</button>
-                    </div>
-                </div> -->
 
             </div>
         </div>
+
 
         <!-- Barre latérale======================== -->
         <div class="side">
@@ -209,14 +130,14 @@ if ($conn->connect_error) {
                 <div class="side-item">
                     <i class="fa-solid fa-bars" id="barre"></i><span class="hidden-desc">Menu</span>
                 </div>
-                <div class="side-item">
+                <div class="side-item" id="accueil">
                     <i class="fa-solid fa-house"></i><span class="hidden-desc">Accueil</span>
+                </div>
+                <div class="side-item" id="table_bord">
+                    <i class="fa-solid fa-table-list"></i><span class="hidden-desc">Tableau de bord</span>
                 </div>
                 <div class="side-item" id="ajout_stage">
                     <i class="fa-solid fa-plus"></i><span class="hidden-desc">Ajouter une offre</span>
-                </div>
-                <div class="side-item">
-                    <i class="fa-solid fa-trash"></i><span class="hidden-desc">Supprimer une offre</span>
                 </div>
                 <div class="side-item">
                     <i class="fa-solid fa-heart"></i><span class="hidden-desc">Favoris</span>
