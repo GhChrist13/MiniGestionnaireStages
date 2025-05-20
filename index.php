@@ -70,7 +70,7 @@ if ($conn->connect_error) {
 
             <!-- Block de stages -->
 
-            <div class="stage">
+            <div class="stage" translate="no">
 
                 <?php
 
@@ -84,7 +84,7 @@ if ($conn->connect_error) {
                             <div class="images" style="background-image: url(<?php echo $row["adresse_image"] ?>);"></div>
                             <div class="desc">
                                 <H2><?php echo $row["intitule_stage"]; ?></H2>
-                                <h5><?php echo $row["adresse"] ?>;</h5>
+                                <h5><?php echo $row["adresse"] ?></h5>
                                 <h6 translate="no">Stage</h6>
                                 <span><i class="fa-solid fa-heart"></i></span>
                                 <button>Voir l'offre</button>
