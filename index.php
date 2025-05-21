@@ -57,7 +57,8 @@ if ($conn->connect_error) {
             </div>
 
             <!-- Filtrage -->
-            <div class="filtre">
+            <div class="filtre" translate="no">
+                <div class="filtres">TOUS</div>
                 <?php
                 $sql = "SELECT DISTINCT nom_entreprise FROM stage";
                 $result = $conn->query($sql);
