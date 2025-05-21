@@ -100,10 +100,14 @@ header {
     cursor: pointer;
 }
 
+.filtres.active{background-color: #4d79ff; color: white;}
+
 .filtres:hover {
     background-color: #4d79ff;
     color: white;
 }
+
+.filtres:active{background-color: blue; color: white;}
 
 /* Block de stages===== */
 
