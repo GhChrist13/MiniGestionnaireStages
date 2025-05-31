@@ -1,0 +1,136 @@
+/* Réinitialisation de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('image.png');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Conteneur principal */
+.container {
+    background: local;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 255, 0.3) 0px 1px 2px 0px,
+        rgba(0, 0, 255, 0.15) 0px 2px 6px 2px;
+    width: 100%;
+    max-width: 450px;
+}
+
+/* Titre */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #c6c6c6;
+    font-size: 26px;
+}
+
+/* Groupe de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #c8c8c8;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Bouton */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Pied de formulaire */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Messages */
+.message {
+    margin-bottom: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+/* Icône œil (optionnelle si JS présent) */
+.toggle-password {
+    position: absolute;
+    top: 38px;
+    right: 12px;
+    font-size: 18px;
+    color: #777;
+    cursor: pointer;
+}
+
+.toggle-password:hover {
+    color: #007bff;
+}

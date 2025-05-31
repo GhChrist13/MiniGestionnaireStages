@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e6f6fc;
+            padding: 3px 8px;
+            height: 85px;
+
+
+        }
+
+        .marque {
+            gap: 2px;
+            display: flex;
+
+
+
+        }
+
+        .droite {
+            display: flex;
+            gap: 50px;
+            margin-right: 10px;
+
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+
+
+        }
+
+        .nav-links {
+
+            font-size: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        .conn {
+            padding: 10px;
+            height: 25px;
+            border-radius: 15px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            margin-left: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+        }
+
+        .conn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .conn:hover {
+            background: linear-gradient(135deg, #0056b3, #0099cc);
+
+
+        }
+
+        .logo-nom {
+            height: 60px;
+            font-size: 33px;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+        }
+
+        .contact {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #66a6ff, #99d5ff);
+            height: 60px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+            transition: background 0.5s ease, box-shadow 0.5s ease;
+
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .contact:hover {
+            background: linear-gradient(135deg, #007bff, #00cfff);
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        footer {
+            background: linear-gradient(135deg, #66a6ff, #cceeff);
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .application {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 16px;
+        }
+
+        .application * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .application p {
+            font-size: 20px;
+        }
+
+        .application-img {
+            width: 100px;
+
+        }
+
+
+        .suivre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        .suivre * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .suivre-nav {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .suivre-p {
+            font-size: 20px;
+        }
+
+        .nav-links-footer {
+            list-style: none;
+            font-size: 30px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: white;
+
+
+        }
+
+        .a-propos {
+
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 650px;
+        }
+
+        .a-propos-content {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1300px;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .a-propos .texte {
+            flex: 1 1 500px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .a-propos h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            color: #0a5670;
+        }
+
+        .a-propos .texte p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .a-propos .signature {
+            font-style: italic;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .a-propos .image {
+            flex: 1 1 400px;
+        }
+
+        .a-propos .image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                gap: 10px;
+            }
+
+            .droite {
+                margin: 0;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin: 10px 0;
+            }
+
+            .marque {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo {
+                height: 70px;
+            }
+
+            .logo-nom {
+                font-size: 24px;
+            }
+
+            .conn {
+                margin-top: 10px;
+                font-size: 18px;
+                padding: 8px 16px;
+            }
+
+            .a-propos-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+
+            .a-propos .texte {
+                font-size: 16px;
+            }
+
+            .a-propos h2 {
+                font-size: 28px;
+                text-align: center;
+            }
+
+            .contact {
+                font-size: 20px;
+                max-width: 90%;
+                height: 50px;
+            }
+
+            .foot {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .suivre-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .footer-bottom {
+                padding: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <p class="conn"><a href="http://localhost/gestionnaireStages/connexion.php">Se Connecter</a></p>
+        <div class="marque">
+
+            <img class="logo" src="logo.png" alt="">
+            <h2 class="logo-nom">StageConnect</h2>
+        </div>
+
+        <div class="droite">
+            <ul class="nav">
+
+                <li class="nav-links"><a href="pageAccueil.html">Accueil</a></li>
+                <li class="nav-links"><a href="About.html">About</a></li>
+                <li class="nav-links"><a href="Contact.html">Contact</a></li>
+            </ul>
+
+
+        </div>
+
+    </header>
+
+    <section class="a-propos">
+        <div class="a-propos-content">
+            <div class="texte">
+                <h2>À propos de <span style="color:#00BFFF;">StageConnect</span></h2>
+                <p>
+                    Chez <strong>StageConnect</strong>, nous croyons que chaque stage est une étape décisive dans le
+                    parcours d’un étudiant.
+                    C’est pourquoi nous avons créé une plateforme intuitive et complète, pensée pour accompagner les
+                    stagiaires, les entreprises et les établissements tout au long de cette expérience.
+                </p>
+                <p>
+                    Grâce à notre solution, les étudiants peuvent gérer leur stage en toute autonomie :
+                    de la définition des objectifs jusqu’à la validation finale, tout est centralisé.
+                    Les tuteurs et encadrants disposent également d’un espace pour suivre les progrès, évaluer les
+                    performances, et communiquer facilement avec leurs stagiaires.
+                </p>
+                <p>
+                    Fini les papiers éparpillés, les suivis manuels et les délais compliqués.
+                    Avec StageConnect, chaque acteur du stage a accès à des outils clairs, modernes et efficaces pour se
+                    concentrer sur l’essentiel : l’apprentissage et l’accompagnement.
+                </p>
+                <p class="signature">
+                    🚀 StageConnect, c’est plus qu’un outil : c’est une nouvelle manière de vivre le stage, connectée,
+                    fluide et valorisante.
+                </p>
+            </div>
+            <div class="image">
+                <img src="Image About.png" alt="Illustration de stage" />
+                <p class="contact"><a href="Contact.html">Nous Contacter</a></p>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <div class="foot">
+
+            <div class="application">
+                <p class="application-p">Telecharger Application</p>
+                <img class="application-img" src="Logo 2.png" alt="">
+            </div>
+
+            <div class="suivre">
+                <p class="suivre-p">Suivi nous sur nos réseaux</p>
+                <ul class="suivre-nav">
+                    <li class="nav-links-footer"><i class="fa-brands fa-facebook"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-square-instagram"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-youtube"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-linkedin"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-tiktok"></i></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 StageConnect. Tous droits réservés.
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

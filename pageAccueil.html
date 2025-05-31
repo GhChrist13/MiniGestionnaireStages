@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6134650aa8.js" crossorigin="anonymous"></script>
+    <title>Bienvenue en Stage Connect</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e6f6fc;
+            padding: 3px 8px;
+            height: 85px;
+
+
+        }
+
+        .marque {
+            gap: 2px;
+            display: flex;
+
+
+
+        }
+
+        .droite {
+            display: flex;
+            gap: 50px;
+            margin-right: 10px;
+
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+
+
+        }
+
+        .nav-links {
+
+            font-size: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        .conn {
+            padding: 10px;
+            height: 25px;
+            border-radius: 15px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            margin-left: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+        }
+
+        .conn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .conn:hover {
+            background: linear-gradient(135deg, #0056b3, #0099cc);
+
+
+        }
+
+        .logo-nom {
+            height: 60px;
+            font-size: 33px;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        footer {
+            background: linear-gradient(135deg, #66a6ff, #cceeff);
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .application {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 16px;
+        }
+
+        .application * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .application p {
+            font-size: 20px;
+        }
+
+        .application-img {
+            width: 100px;
+
+        }
+
+
+        .suivre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        .suivre * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .suivre-nav {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .suivre-p {
+            font-size: 20px;
+        }
+
+        .nav-links-footer {
+            list-style: none;
+            font-size: 30px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+
+
+        }
+
+
+
+        .hero {
+
+            margin: 0;
+            padding: 3px;
+            background-image: url('Image Acceuil.png');
+            background-size: cover;
+            background-position: center;
+            height: 900px;
+            position: relative;
+            color: white;
+            min-height: 919px;
+
+
+
+
+        }
+
+        .overlay {
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
+            padding: 10px;
+            max-width: 6500px;
+            text-align: left;
+            height: 905px;
+            margin-left: -10px;
+            margin-top: -4px;
+
+        }
+
+        .titre {
+
+            margin-top: 150px;
+            font-size: 80px;
+            margin-left: 10px;
+
+
+            /* animation: anim ease 2s infinite; */
+        }
+
+        /* @keyframes anim {
+        from{margin-left: 50px;}
+        to{margin-left: -550px}
+    } */
+
+
+
+
+        .description {
+
+            margin-left: 30px;
+            display: flex;
+            width: 300px;
+            font-size: 25px;
+            font-family: "Underdog", system-ui;
+            font-style: italic;
+
+        }
+
+        .button {
+            height: 50px;
+            border-radius: 18px;
+            font-size: 30px;
+            background-image: linear-gradient(to right, blue, aqua);
+            margin-left: 20px;
+            border: 1px solid #00BFFF;
+            max-width: 300px;
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+            transition: background 1s ease,
+
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #0056b3, #0099cc);
+            border: 1px solid;
+
+
+
+
+        }
+
+
+
+
+
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                gap: 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                margin: 10px 0;
+            }
+
+            .conn {
+                margin: 10px 0;
+            }
+
+            .logo {
+                height: 70px;
+            }
+
+            .logo-nom {
+                font-size: 25px;
+            }
+
+            .hero {
+                height: auto;
+                padding: 30px 10px;
+                text-align: center;
+            }
+
+            .overlay {
+                height: auto;
+                margin: 0;
+                padding: 30px 15px;
+                text-align: center;
+            }
+
+            .titre {
+                font-size: 40px;
+                margin: 20px 0;
+            }
+
+            .description {
+                width: 100%;
+                font-size: 18px;
+                margin: 20px 0;
+                justify-content: center;
+            }
+
+            .button {
+                margin: 20px auto;
+                font-size: 20px;
+                height: 45px;
+                width: 80%;
+            }
+
+            .foot {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .suivre-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .footer-bottom {
+                text-align: center;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <p class="conn"><a href="http://localhost/gestionnaireStages/connexion.php">Se Connecter</a></p>
+        <div class="marque">
+
+            <img class="logo" src="Logo.png" alt="">
+            <h2 class="logo-nom">StageConnect</h2>
+        </div>
+
+        <div class="droite">
+            <ul class="nav">
+
+                <li class="nav-links"><a href="pageAccueil.html">Acceuil</a></li>
+                <li class="nav-links"><a href="About.html">About</a></li>
+                <li class="nav-links"><a href="Contact.html">Contact</a></li>
+            </ul>
+
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="hero" translate="no">
+            <div class="overlay">
+
+                <h1 class="titre"> <span style="color: #00BFFF;">S</span>tage<span
+                        style="color: #00BFFF;">C</span>onnect</h1>
+                <p class="description"> Gagnez du temps avec StageConnect – la solution idéale pour
+                    gérer vos stages, suivre les candidats et optimiser l’expérience
+                    des stagiaires en un seul endroit.</p>
+
+                <button class="button"><a href="About.html">Decouvrir-Nous</a></button>
+
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="foot">
+
+            <div class="application">
+                <p class="application-p">Telecharger Application</p>
+                <img class="application-img" src="Logo 2.png" alt="">
+            </div>
+
+            <div class="suivre">
+                <p class="suivre-p">Suivi nous sur nos réseaux</p>
+                <ul class="suivre-nav">
+                    <li class="nav-links-footer"><i class="fa-brands fa-facebook"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-square-instagram"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-youtube"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-linkedin"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-tiktok"></i></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 StageConnect. Tous droits réservés.
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

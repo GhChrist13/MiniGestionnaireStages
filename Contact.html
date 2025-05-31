@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6134650aa8.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e6f6fc;
+            padding: 3px 8px;
+            height: 85px;
+
+
+        }
+
+        .marque {
+            gap: 2px;
+            display: flex;
+
+
+
+        }
+
+        .droite {
+            display: flex;
+            gap: 50px;
+            margin-right: 10px;
+
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+
+
+        }
+
+        .nav-links {
+
+            font-size: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            list-style: none;
+            color: black;
+        }
+
+        .conn {
+            padding: 10px;
+            height: 25px;
+            border-radius: 15px;
+            font-size: 20px;
+            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            margin-left: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+        }
+
+        .conn a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .conn:hover {
+            background: linear-gradient(135deg, #0056b3, #0099cc);
+
+
+        }
+
+        .logo-nom {
+            height: 60px;
+            font-size: 33px;
+        }
+
+        .logo {
+            height: 100px;
+            width: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        footer {
+            background: linear-gradient(135deg, #66a6ff, #cceeff);
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-around;
+
+
+        }
+
+        .application {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 16px;
+        }
+
+        .application * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .application p {
+            font-size: 20px;
+        }
+
+        .application-img {
+            width: 100px;
+
+        }
+
+
+        .suivre {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+
+        }
+
+        .suivre * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .suivre-nav {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .suivre-p {
+            font-size: 20px;
+        }
+
+        .nav-links-footer {
+            list-style: none;
+            font-size: 30px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+        }
+
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        article {
+            flex: 1;
+        }
+
+
+        .together {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+        }
+
+
+
+
+        .first {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+
+
+
+
+
+        .second {
+
+            margin: 0;
+            padding: 0;
+            gap: 10px;
+
+        }
+
+        .second ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .second-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin: 0;
+            padding: 0;
+
+
+
+        }
+
+        .second-logo a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .second-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .third {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2px;
+            margin: 0;
+            box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+            min-height: 500px;
+            height: auto;
+
+
+
+
+        }
+
+        .third-title {
+            font-size: 25px;
+        }
+
+        .third-second-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .third-message {
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            border-radius: 10px;
+            background: linear-gradient(175deg, #5faeff, #90e0ff);
+        }
+
+        .third-message p {
+            width: 500px;
+        }
+
+
+
+
+
+        .get-in-touch {
+            flex-grow: 1;
+            flex-basis: 200;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 500px;
+
+
+        }
+
+        .third-text {
+            border-radius: 15px;
+            height: 40px;
+        }
+
+        .third-child-message {
+            border-radius: 15px;
+            height: 80px;
+        }
+
+        .third-button {
+            border-radius: 15px;
+            height: 30px;
+            width: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #5faeff, #90e0ff);
+
+        }
+
+        .third-button-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .third-button-child:hover {
+            display: flex;
+
+        }
+
+
+        .third-child-commentaire {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+
+        }
+
+
+
+
+
+
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                gap: 10px;
+                align-items: center;
+                padding: 10px;
+            }
+
+            .nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            .marque {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo {
+                height: 60px;
+            }
+
+            .logo-nom {
+                font-size: 25px;
+            }
+
+            .third {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .third-message,
+            .get-in-touch {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .third-message p,
+            .get-in-touch input {
+                width: 100%;
+            }
+
+            .get-in-touch {
+                width: 100%;
+            }
+
+            .third-text,
+            .third-child-message {
+                width: 100%;
+            }
+
+            .foot {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                padding: 20px;
+            }
+
+            .suivre-nav {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .second ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .second p {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <p class="conn"><a href="http://localhost/gestionnaireStages/connexion.php">Se Connecter</a></p>
+        <div class="marque">
+
+            <img class="logo" src="logo.png" alt="">
+            <h2 class="logo-nom">StageConnect</h2>
+        </div>
+
+        <div class="droite">
+            <ul class="nav">
+
+                <li class="nav-links"><a href="pageAccueil.html">Acceuil</a></li>
+                <li class="nav-links"><a href="About.html">About</a></li>
+                <li class="nav-links"><a href="Contact.html">Contact</a></li>
+            </ul>
+
+
+        </div>
+
+    </header>
+
+    <article>
+
+        <div class="together">
+
+            <div class="second">
+                <p style="font-size: 40px; display: flex; justify-content: center;"><strong>Contactez-Nous</strong></p>
+                <ul>
+                    <div class="child">
+                        <p class="second-logo"><i class="fa-regular fa-envelope"></i></p>
+                        <p class="second-text">Stage.Connect@gmail.com</p>
+                    </div>
+                    <div class="child">
+                        <p class="second-logo"><i class="fa-sharp fa-solid fa-phone"></i></p>
+                        <p class="second-text">+ 06 12 34 56 78</p>
+
+                    </div>
+                    <div class="child">
+                        <p class="second-logo"><a
+                                href="https://www.google.fr/maps/place/374+Rue+de+Vaugirard,+75015+Paris/@48.8304485,2.2872064,14z/data=!4m10!1m2!2m1!1sESIC+374+Rue+de+Vaugirard+75012!3m6!1s0x47e6706db4edf4fd:0x3bf4cfe04eabbe5a!8m2!3d48.8336576!4d2.2891508!15sCh9FU0lDIDM3NCBSdWUgZGUgVmF1Z2lyYXJkIDc1MDEykgERY29tcG91bmRfYnVpbGRpbmfgAQA!16s%2Fg%2F11c43_stxg?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank"><i class="fa-solid fa-location-dot"></i></a></p>
+                        <p class="second-text">ESIC 374 Rue de Vaugirard 75012</p>
+
+                    </div>
+                </ul>
+
+            </div>
+
+
+            <div class="third">
+
+                <div class="third-message">
+                    <div>
+                        <h1 class="third-title">Get in touch with </h1>
+
+
+                        <h1 class="third-second-title" translate="no"> <span style="font-size: 45px;"><span
+                                    style="color: blue;">S</span>tage<span style="color: blue;">C</span>onnect
+                        </h1></span>
+                    </div>
+
+
+                    <p>
+                        Vous avez une question, une suggestion, ou vous rencontrez un besoin spécifique ?
+                        <br>
+                        N’hésitez pas à entrer en contact avec nous.
+
+                        <br><br>
+                        Que vous soyez étudiant à la recherche d’un stage, une entreprise souhaitant proposer une offre,
+                        ou un établissement partenaire, notre équipe est à votre écoute pour vous accompagner à chaque
+                        étape.
+
+                        <br><br>
+                        Chez StageConnect, nous mettons un point d’honneur à établir une communication claire,
+                        rapide et efficace avec l’ensemble de notre communauté.
+                        <br>
+                        Votre satisfaction est notre priorité.
+                    </p>
+                </div>
+
+
+
+                <form action="">
+                    <div class="get-in-touch">
+                        <h1 class="third-child-commentaire">Commentaire</h1>
+                        <input class="third-text " type="email" placeholder="Email">
+                        <input class="third-text " type="text" placeholder="Nom">
+                        <input class="third-child-message  " type="text" placeholder="Message">
+                        <div class="third-button-child">
+                            <button class="third-button " type="button">Submit</button>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+
+
+
+
+        </div>
+    </article>
+
+
+    <footer>
+
+        <div class="foot">
+
+            <div class="application">
+                <p class="application-p">Telecharger Application</p>
+                <img class="application-img" src="Logo 2.png" alt="">
+            </div>
+
+            <div class="suivre">
+                <p class="suivre-p">Suivi nous sur nos réseaux</p>
+                <ul class="suivre-nav">
+                    <li class="nav-links-footer"><i class="fa-brands fa-facebook"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-square-instagram"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-youtube"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-linkedin"></i></li>
+                    <li class="nav-links-footer"><i class="fa-brands fa-tiktok"></i></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 StageConnect. Tous droits réservés.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
